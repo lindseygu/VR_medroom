@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     public float spawnDistance = 2f;
     public GameObject spawnMenu;
     public Transform rayOrigin;
-    public Camera eventCamera; // Drag CenterEyeAnchor's camera here
+    public Camera eventCamera;
 
     private bool wasTriggerPressed = false;
 
