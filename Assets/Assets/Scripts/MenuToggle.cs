@@ -4,7 +4,7 @@ using UnityEngine.XR;
 public class MenuToggle : MonoBehaviour
 {
     public GameObject spawnMenu;
-    public GameObject leftRay; // Drag your left Ray Interactor here
+    public GameObject leftRay;
     private bool wasPressed = false;
 
     void Start()
