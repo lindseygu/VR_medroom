@@ -5,20 +5,20 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjectSpawner : MonoBehaviour
 {
     [Header("Prefabs to Spawn")]
-    public GameObject[] spawnablePrefabs; // Assign your prefabs here in Inspector
+    public GameObject[] spawnablePrefabs;
 
     [Header("Controller References")]
-    public Transform controllerTransform; // The controller that does the spawning
-    public InputActionProperty triggerAction; // Trigger button input
-    public InputActionProperty gripAction; // Grip button input
+    public Transform controllerTransform;
+    public InputActionProperty triggerAction;
+    public InputActionProperty gripAction;
 
     [Header("Spawn Settings")]
     public float maxRayDistance = 10f;
-    public LayerMask groundLayer; // Set this to the layer your floor/ground is on
-    public Color previewColor = new Color(0f, 1f, 0f, 0.4f); // Transparent green
+    public LayerMask groundLayer; 
+    public Color previewColor = new Color(0f, 1f, 0f, 0.4f);
 
     [Header("Ray Visual")]
-    public LineRenderer lineRenderer; // Assign a LineRenderer component
+    public LineRenderer lineRenderer;
 
     private int currentPrefabIndex = 0;
     private GameObject previewObject;
@@ -122,7 +122,7 @@ public class ObjectSpawner : MonoBehaviour
             {
                 // Set to transparent
                 mat.color = previewColor;
-                mat.SetFloat("_Mode", 3); // Transparent mode
+                mat.SetFloat("_Mode", 3);
                 mat.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
                 mat.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
                 mat.SetInt("_ZWrite", 0);
